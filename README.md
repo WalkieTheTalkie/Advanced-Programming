@@ -12,9 +12,9 @@ List of things being worked upon:
 -Customer Mode
 
 ==============
--Java Methods
+Java Methods
 ==============
-=> Arrays
+Arrays
 
 ArrayLists
 
@@ -57,10 +57,10 @@ Heap Sort
   
   -Data Structure Description
 
-Volume of data populating at least 25 records for each class.
+  -Volume of data populating at least 25 records for each class.
 
-Application Reports
+  -Application Reports
 
-Project Documentation
+  -Project Documentation
 
 ==========================================
