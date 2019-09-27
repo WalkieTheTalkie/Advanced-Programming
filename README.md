@@ -4,6 +4,7 @@ Group Project for Aurora Food Pantry
 List of things being worked upon:
 ====================================
 -GUI
+
 -Admin Mode
 -User Mode
 -Customer Mode
