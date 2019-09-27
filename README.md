@@ -6,25 +6,49 @@ List of things being worked upon:
 -GUI
 
 -Admin Mode
+
 -User Mode
+
 -Customer Mode
+
+==============
 -Java Methods
-  => Arrays
-     ArrayLists
-     Linked Lists
-     Stacks
-     Queues
-     Hashes
-     Iterator
-     Comparator
-     Data Field Validation
-     Database Storage and Retrieval
-     Searching and Sorting:
-      ==>Bubble Sort
-         Binary Sort
-         Merge Sort
-         Heap Sort
+==============
+=> Arrays
+
+ArrayLists
+
+Linked Lists
+
+Stacks
+
+Queues
+
+Hashes
+
+Iterator
+
+Comparator
+
+Data Field Validation
+
+Database Storage and Retrieval
+
+=======================
+Searching and Sorting:
+=======================
+Bubble Sort
+
+Binary Sort
+
+Merge Sort
+
+Heap Sort
+
+======================
 2 Specific Classes
+======================
+
   -Employee Class
   -Customer Class
   -Product Class
@@ -32,4 +56,5 @@ List of things being worked upon:
 Volume of data populating at least 25 records for each class.
 Application Reports
 Project Documentation
+
 ==========================================
