@@ -50,11 +50,17 @@ Heap Sort
 ======================
 
   -Employee Class
+  
   -Customer Class
+  
   -Product Class
+  
   -Data Structure Description
+
 Volume of data populating at least 25 records for each class.
+
 Application Reports
+
 Project Documentation
 
 ==========================================
