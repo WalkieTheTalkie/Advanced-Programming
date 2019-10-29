@@ -5,6 +5,7 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
@@ -21,9 +22,12 @@
                         <Font name="Bell MT Bold" size="18.0" />
                      </font>
                   </Text>
-                  <RadioButton fx:id="Admin" layoutX="127.0" layoutY="98.0" mnemonicParsing="false" text="Admin" />
-                  <RadioButton fx:id="Employee" layoutX="301.0" layoutY="98.0" mnemonicParsing="false" text="Employee" />
-                  <RadioButton fx:id="Volunteer" layoutX="496.0" layoutY="98.0" mnemonicParsing="false" text="Volunteer" />
+                  <RadioButton fx:id="Admin" layoutX="127.0" layoutY="98.0" mnemonicParsing="false" text="Admin">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="users" />
+                     </toggleGroup></RadioButton>
+                  <RadioButton fx:id="Employee" layoutX="301.0" layoutY="98.0" mnemonicParsing="false" text="Employee" toggleGroup="$users" />
+                  <RadioButton fx:id="Volunteer" layoutX="496.0" layoutY="98.0" mnemonicParsing="false" text="Volunteer" toggleGroup="$users" />
                   <Text layoutX="223.0" layoutY="189.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please Enter Your Credentials:">
                      <font>
                         <Font name="Bell MT Bold" size="18.0" />

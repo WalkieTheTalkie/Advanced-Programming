@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
@@ -17,53 +18,87 @@ import javafx.stage.Stage;
 public class HomePageController {
 	@FXML
 	private Button Continue;
-	
+
 	@FXML
 	private TextField userName;
-	
+
 	@FXML
 	private TextField Password;
 	
 	@FXML
+	private ToggleGroup users;
+
+	@FXML
 	private RadioButton Volunteer;
-	
+
 	@FXML
 	private RadioButton Employee;
-	
+
 	@FXML
-	private RadioButton Admin;
-	
+	private RadioButton Admin; 
+
 	@FXML
 	private Hyperlink newUser;
-	
+
 	@FXML
 	public void initialize() {
-		newUser.setOnAction((event)->{
-			System.out.println("just display a new Scene Already ");
+		newUser.setOnAction((event) -> {
 			Stage secondStage = new Stage();
 			try {
 				secondStage.setTitle("Aurora Food Pantry New User Page");
 				AnchorPane root = FXMLLoader.load(getClass().getResource("NewUserPage.fxml"));
-				Scene scene = new Scene(root,700,700);
+				Scene scene = new Scene(root, 700, 700);
 				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 				secondStage.setScene(scene);
 				secondStage.show();
-			} catch(Exception e) {
+			} catch (Exception e) {
 				e.printStackTrace();
-			
-		}});
-		
-		Continue.setOnAction((event)->{
-			if(Volunteer.isSelected()) {
-				
-			}else if(Employee.isSelected()) {
-				
-			}else if(Admin.isSelected()) {
-				
-			}else {
+
+			}
+		});
+
+		Continue.setOnAction((event) -> {
+			Stage thirdStage = new Stage();
+			if (Volunteer.isSelected()) {
+				try {
+					thirdStage.setTitle("Aurora Food Pantry Volunteer Page");
+					BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Volunteer_Scene.fxml"));
+					Scene scene = new Scene(root, 700, 700);
+					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+					thirdStage.setScene(scene);
+					thirdStage.show();
+				} catch (Exception e) {
+					e.printStackTrace();
+
+				}
+			} else if (Employee.isSelected()) {
+				try {
+					thirdStage.setTitle("Aurora Food Pantry Employee Page");
+					AnchorPane root = FXMLLoader.load(getClass().getResource("Employee_Scene.fxml"));
+					Scene scene = new Scene(root, 700, 700);
+					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+					thirdStage.setScene(scene);
+					thirdStage.show();
+				} catch (Exception e) {
+					e.printStackTrace();
+
+				}
+			} else if (Admin.isSelected()) {
+				try {
+					thirdStage.setTitle("Aurora Food Pantry Admin Page");
+					BorderPane root = (BorderPane) FXMLLoader.load(getClass().getResource("AdminPage.fxml"));
+					Scene scene = new Scene(root, 700, 700);
+					scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+					thirdStage.setScene(scene);
+					thirdStage.show();
+				} catch (Exception e) {
+					e.printStackTrace();
+
+				}
+			} else {
 				System.out.println("You need to select a radio button.");
 			}
 		});
 	}
-	
+
 }
