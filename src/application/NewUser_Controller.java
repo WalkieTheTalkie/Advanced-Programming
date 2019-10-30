@@ -79,6 +79,8 @@ public class NewUser_Controller {
 				
 				System.out.println(e.toString());
 				
+				DBEmployee emp = new DBEmployee(e);
+				
 			}else if (Volunteer.isSelected()) {
 				sent = 2;
 				v.setFirstName(Fname.getText());
@@ -92,8 +94,11 @@ public class NewUser_Controller {
 				v.setAddress(Address.getText());
 				v.setUserName(Username.getText());
 				v.setPassword(Password.getText());
+				v.setCourtOrdered(false);
 				
 				System.out.println(v.toString());
+				
+				DBVolunteer volun = new DBVolunteer(v);
 			}// else {
 			//	System.out.println("This is not Working and they aren't being saved in objects!!!");
 			//}
