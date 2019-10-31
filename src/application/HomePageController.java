@@ -45,8 +45,8 @@ public class HomePageController {
 		newUser.setOnAction((event) -> {
 			Stage secondStage = new Stage();
 			try {
-				secondStage.setTitle("Aurora Food Pantry New User Page");
-				AnchorPane root = FXMLLoader.load(getClass().getResource("NewUserPage.fxml"));
+				secondStage.setTitle("Aurora Food Pantry New Volunteer Page");
+				AnchorPane root = FXMLLoader.load(getClass().getResource("New_Volunteer.fxml"));
 				Scene scene = new Scene(root, 700, 700);
 				scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 				secondStage.setScene(scene);
