@@ -16,6 +16,9 @@ public class NewUser_Controller {
 	@FXML ToggleGroup options;
 
 	@FXML
+	private RadioButton Admin;
+	
+	@FXML
 	private RadioButton Employee;
 
 	@FXML
@@ -61,26 +64,45 @@ public class NewUser_Controller {
 		AddUser.setOnAction((event) -> {
 			EmployeeClass e = new EmployeeClass();
 			Volunteer v = new Volunteer();
+			Admin a = new Admin();
 			int sent = 0;
 
-			if (Employee.isSelected()) {
+			if (Admin.isSelected()) {
 				sent = 1;
-				e.setFirstName(Fname.getText());
-				e.setLastName(Lname.getText());
-				e.setMiddleInitial(Minitial.getText());
-				e.setBirthDate(BirthDate.getText());
-				e.setGender(Gender.getText());
-				e.setEmail(Email.getText());
-				e.setEmergencyContact(EmergencyContact.getText());
-				e.setPhone(Phone.getText());
-				e.setEmployeeUser(Username.getText());
-				e.setEmployeePass(Password.getText());
-				e.setAddress(Address.getText());
+				a.setFirstName(Fname.getText());
+				a.setLastName(Lname.getText());
+				a.setMiddleInitial(Minitial.getText());
+				a.setBirthDate(BirthDate.getText());
+				a.setGender(Gender.getText());
+				a.setEmail(Email.getText());
+				a.setEmergencyContact(EmergencyContact.getText());
+				a.setPhone(Phone.getText());
+				a.setUsername(Username.getText());
+				a.setPassword(Password.getText());
+				a.setAddress(Address.getText());
 				
 				System.out.println(e.toString());
 				
-				DBEmployee emp = new DBEmployee(e);
+				//DBAdmin adm = new DBAdmin(a);
 				
+			}else if (Employee.isSelected()) {
+				sent = 2;
+				v.setFirstName(Fname.getText());
+				v.setLastName(Lname.getText());
+				v.setMiddleInitial(Minitial.getText());
+				v.setBirthDate(BirthDate.getText());
+				v.setGender(Gender.getText());
+				v.setEmail(Email.getText());
+				v.setEmergencyContact(EmergencyContact.getText());
+				v.setPhone(Phone.getText());
+				v.setAddress(Address.getText());
+				v.setUserName(Username.getText());
+				v.setPassword(Password.getText());
+				v.setCourtOrdered(false);
+				
+				System.out.println(v.toString());
+				
+				DBEmployee emp = new DBEmployee(e);
 			}else if (Volunteer.isSelected()) {
 				sent = 2;
 				v.setFirstName(Fname.getText());
@@ -99,6 +121,7 @@ public class NewUser_Controller {
 				System.out.println(v.toString());
 				
 				DBVolunteer volun = new DBVolunteer(v);
+				
 			}// else {
 			//	System.out.println("This is not Working and they aren't being saved in objects!!!");
 			//}
@@ -122,6 +145,7 @@ public class NewUser_Controller {
 			//}
 
 		});
+		
 	}
 
 }
