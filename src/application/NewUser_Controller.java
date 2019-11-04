@@ -83,7 +83,7 @@ public class NewUser_Controller {
 				
 				System.out.println(e.toString());
 				
-				//DBAdmin adm = new DBAdmin(a);
+				DBAdmin adm = new DBAdmin(a);
 				
 			}else if (Employee.isSelected()) {
 				sent = 2;
