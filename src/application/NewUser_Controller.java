@@ -87,24 +87,23 @@ public class NewUser_Controller {
 				
 			}else if (Employee.isSelected()) {
 				sent = 2;
-				v.setFirstName(Fname.getText());
-				v.setLastName(Lname.getText());
-				v.setMiddleInitial(Minitial.getText());
-				v.setBirthDate(BirthDate.getText());
-				v.setGender(Gender.getText());
-				v.setEmail(Email.getText());
-				v.setEmergencyContact(EmergencyContact.getText());
-				v.setPhone(Phone.getText());
-				v.setAddress(Address.getText());
-				v.setUserName(Username.getText());
-				v.setPassword(Password.getText());
-				v.setCourtOrdered(false);
+				e.setFirstName(Fname.getText());
+				e.setLastName(Lname.getText());
+				e.setMiddleInitial(Minitial.getText());
+				e.setBirthDate(BirthDate.getText());
+				e.setGender(Gender.getText());
+				e.setEmail(Email.getText());
+				e.setEmergencyContact(EmergencyContact.getText());
+				e.setPhone(Phone.getText());
+				e.setEmployeeUser(Username.getText());
+				e.setEmployeePass(Password.getText());
+				e.setAddress(Address.getText());
 				
-				System.out.println(v.toString());
+				System.out.println(e.toString());
 				
 				DBEmployee emp = new DBEmployee(e);
 			}else if (Volunteer.isSelected()) {
-				sent = 2;
+				sent = 3;
 				v.setFirstName(Fname.getText());
 				v.setLastName(Lname.getText());
 				v.setMiddleInitial(Minitial.getText());
