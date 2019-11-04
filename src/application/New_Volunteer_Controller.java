@@ -5,6 +5,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.stage.Stage;
 
 public class New_Volunteer_Controller {
 	@FXML 
@@ -65,6 +66,7 @@ public class New_Volunteer_Controller {
 			System.out.println(v.toString());
 			
 			DBVolunteer volun = new DBVolunteer(v);
+			
 		});
 	}
 }
