@@ -58,9 +58,10 @@ public class HomePageController {
 		});
 
 		Continue.setOnAction((event) -> {
-			Stage thirdStage = new Stage();
+			Stage thirdStage = (Stage) Continue.getScene().getWindow();
 			if (Volunteer.isSelected()) {
 				try {
+					
 					thirdStage.setTitle("Aurora Food Pantry Volunteer Page");
 					BorderPane root = (BorderPane)FXMLLoader.load(getClass().getResource("Volunteer_Scene.fxml"));
 					Scene scene = new Scene(root, 700, 700);
