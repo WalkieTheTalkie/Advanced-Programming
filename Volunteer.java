@@ -1,11 +1,18 @@
 package application;
 
-public class Volunteer extends Person {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Volunteer extends Person implements Serializable  {
 	int VolunteerID;
 	int HoursVolunteered;
 	Boolean CourtOrdered;
 	String UserName;
 	String Password;
+	
+	public Volunteer() {
+		
+	}
 
 	public Volunteer(int volunteerID, int hoursVolunteered, Boolean courtOrdered, String userName, String password) {
 		super();

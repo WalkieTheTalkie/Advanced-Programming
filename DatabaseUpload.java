@@ -1,4 +1,4 @@
-package employeeClasses;
+package application;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;

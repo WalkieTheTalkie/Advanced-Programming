@@ -1,6 +1,9 @@
 package application;
 
-public class Person {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Person implements Serializable{
 	String FirstName;
 	String MiddleInitial;
 	String LastName;

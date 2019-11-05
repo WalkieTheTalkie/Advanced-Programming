@@ -10,8 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="436.0" prefWidth="647.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Admin_Controller">
    <top>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Admin " textAlignment="CENTER" BorderPane.alignment="CENTER">
          <font>
@@ -27,20 +26,20 @@
                   <Font name="Bell MT" size="18.0" />
                </font>
             </Text>
-            <RadioButton layoutX="285.0" layoutY="64.0" mnemonicParsing="false" text="Employee">
+            <RadioButton fx:id="Employee" layoutX="285.0" layoutY="64.0" mnemonicParsing="false" text="Employee">
                <toggleGroup>
                   <ToggleGroup fx:id="database" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="419.0" layoutY="64.0" mnemonicParsing="false" text="Volunteer" toggleGroup="$database" />
-            <TextArea layoutX="120.0" layoutY="87.0" prefHeight="186.0" prefWidth="404.0" promptText="This text area will display all people and personal info  based on whic database has been chosen above." />
-            <RadioButton layoutX="143.0" layoutY="64.0" mnemonicParsing="false" text="Admin" toggleGroup="$database" />
-            <TextField layoutX="120.0" layoutY="324.0" prefHeight="33.0" prefWidth="198.0" promptText="Enter last name:">
+            <RadioButton fx:id="Volunteer" layoutX="419.0" layoutY="64.0" mnemonicParsing="false" text="Volunteer" toggleGroup="$database" />
+            <TextArea fx:id="typeHere" layoutX="120.0" layoutY="87.0" prefHeight="186.0" prefWidth="404.0" promptText="This text area will display all people and personal info  based on whic database has been chosen above." />
+            <RadioButton fx:id="Admin" layoutX="143.0" layoutY="64.0" mnemonicParsing="false" text="Admin" toggleGroup="$database" />
+            <TextField fx:id="searchField" layoutX="120.0" layoutY="324.0" prefHeight="33.0" prefWidth="198.0" promptText="Enter last name:">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <Button layoutX="324.0" layoutY="323.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="106.0" text="Search">
+            <Button fx:id="searchButton" layoutX="324.0" layoutY="323.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="106.0" text="Search">
                <font>
                   <Font size="14.0" />
                </font>
@@ -50,6 +49,10 @@
                   <Font name="Bell MT Bold" size="17.0" />
                </font>
             </Text>
+            <Button layoutX="456.0" layoutY="514.0" mnemonicParsing="false" text="Log out" />
+            <Button layoutX="331.0" layoutY="514.0" mnemonicParsing="false" text="View Profile" />
+            <Button layoutX="206.0" layoutY="514.0" mnemonicParsing="false" text="Edit Profiile" />
+            <Button layoutX="94.0" layoutY="514.0" mnemonicParsing="false" text="log Hours" />
          </children>
       </AnchorPane>
    </center>

@@ -1,4 +1,4 @@
-package classes;
+package application;
 
 public class Admin extends Person{
 	private String username;
