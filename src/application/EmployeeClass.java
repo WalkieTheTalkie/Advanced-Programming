@@ -56,11 +56,14 @@ public class EmployeeClass extends Person implements Serializable {
 	 */
 	@Override
 	public String toString() {
-		return "EmployeeID= " + EmployeeID + "\nWorking Hours= " + workinHours + "\nEmployee Username= "
-				+ employeeUser + "\nemployeePass=" + employeePass + "\nFirstName=" + FirstName + "\nMiddleInitial="
-				+ MiddleInitial + "\nLastName=" + LastName + "\nEmail=" + Email + "\nPhone=" + Phone + "\nGender="
-				+ Gender + "\nAddress=" + Address + "\nBirthDate=" + BirthDate + "\nEmergencyContact="
-				+ EmergencyContact;
-	}
+		
+		return "|| ID: " + EmployeeID + "|| Name: " + FirstName + " " + MiddleInitial + " " + LastName + " || Email: " + Email + " || Phone Number: " +
+		Phone + "|| Gender: " + Gender + "|| Address: " + Address + "|| Date of Birth: " + BirthDate + "|| Emergency Contact: " + EmergencyContact + " ||";
+		/*return "EmployeeClass [EmployeeID=" + EmployeeID + ", workinHours=" + workinHours + ", employeeUser="
+				+ employeeUser + ", employeePass=" + employeePass + ", FirstName=" + FirstName + ", MiddleInitial="
+				+ MiddleInitial + ", LastName=" + LastName + ", Email=" + Email + ", Phone=" + Phone + ", Gender="
+				+ Gender + ", Address=" + Address + ", BirthDate=" + BirthDate + ", EmergencyContact="
+				+ EmergencyContact + "]";
+	*/}
 	
 }

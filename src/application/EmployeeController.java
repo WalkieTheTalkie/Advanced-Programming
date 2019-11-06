@@ -1,8 +1,11 @@
 package application;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Scanner;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -12,7 +15,11 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 public class EmployeeController {
 	@FXML
@@ -41,18 +48,30 @@ public class EmployeeController {
 
 	public void initialize() throws Exception {
 		selected.setOnAction((event) -> {
-			EmployeeClass e = new EmployeeClass("firstName", "middleInitial", "lastName", "email", "phone", "gender",
-					"address", "birthDate", "emergencyContact");
-			e.setEmployeeID(1000);
-			e.setWorkinHours(6);
-			e.setEmployeeUser("employeeUser");
-			e.setEmployeePass("employeePass");
+			EmployeeTable q = new EmployeeTable();
+			EmployeeClass e = new EmployeeClass();
+			e = q.getEmployeeByID(1);
+
 
 			if (viewProfile.isSelected()) {
 				area.appendText(e.toString());
 				area.appendText("\n\n ------------- \n\n");
 			} else if (editProfile.isSelected()) {
-
+				
+				//following code is not fixed but should function as a popup box that should let you edit the employee.
+				
+				/* new EventHandler<ActionEvent>() {
+			            @Override
+			            public void handle(ActionEvent event) {
+			                final Stage dialog = new Stage();
+			                dialog.initModality(Modality.APPLICATION_MODAL);             
+			                VBox dialogVbox = new VBox(20);
+			                dialogVbox.getChildren().add(new Text("This is a Dialog"));
+			                Scene dialogScene = new Scene(dialogVbox, 300, 200);
+			                dialog.setScene(dialogScene);
+			                dialog.show();
+			            }
+			         };*/
 				area.appendText("\n\n ------------- \n\n");
 			} else if (viewWorkHours.isSelected()) {
 				String hours = "Working Hours:" + e.getWorkinHours();
