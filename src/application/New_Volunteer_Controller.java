@@ -1,5 +1,7 @@
 package application;
 
+import java.util.HashMap;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
@@ -50,6 +52,7 @@ public class New_Volunteer_Controller {
 	public void initialize() {
 		Volunteer v = new Volunteer();
 		AddUser.setOnAction((event) -> {
+			
 			v.setFirstName(Fname.getText());
 			v.setLastName(Lname.getText());
 			v.setMiddleInitial(Minitial.getText());
@@ -66,6 +69,10 @@ public class New_Volunteer_Controller {
 			System.out.println(v.toString());
 			
 			DBVolunteer volun = new DBVolunteer(v);
+			
+			Stage stage = (Stage) AddUser.getScene().getWindow();
+		    stage.close();
+			
 			
 		});
 	}
