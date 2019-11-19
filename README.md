@@ -3,13 +3,6 @@ Group Project for Aurora Food Pantry
 ====================================
 List of things being worked upon:
 ====================================
--GUI
-
--Admin Mode
-
--User Mode
-
--Customer Mode
 
 ==============
 Java Methods
@@ -30,9 +23,9 @@ Iterator
 
 Comparator
 
-Data Field Validation
+Data Field Validation - DONE
 
-Database Storage and Retrieval
+Database Storage and Retrieval - DONE
 
 =======================
 Searching and Sorting:
@@ -51,9 +44,7 @@ Heap Sort
 
   -Employee Class
   
-  -Customer Class
-  
-  -Product Class
+  -Volunteer Class
   
   -Data Structure Description
 
